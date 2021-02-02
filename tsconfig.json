@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "types": ["node", "@wdio/sync", "@wdio/mocha-framework", "expect-webdriverio"],
+    "skipLibCheck": true,
+    "target": "es2015",
+    "module": "commonjs",
+    "removeComments": true,
+    "strictPropertyInitialization": true,
+    "strictNullChecks": true,
+  },
+  "include": [
+    "./test/**/*.ts",
+    "./wdio.conf.ts"
+  ],
+  "exclude": ["node_modules"],
+}
