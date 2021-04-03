@@ -4,7 +4,7 @@
   "description": "Sample webdriverio + typescript project",
   "scripts": {
     "build": "tsc",
-    "test": "npm run build && wdio dist/wdio.conf.js"
+    "tests": "npm run build && wdio dist/wdio.conf.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,7 +16,7 @@
     "@wdio/spec-reporter": "^7.0.0",
     "@wdio/sync": "^7.2.2",
     "@wdio/types": "^7.2.1",
-    "chromedriver": "^87.0.7",
+    "chromedriver": "^89.0.0",
     "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
     "wdio-chromedriver-service": "^7.0.0"

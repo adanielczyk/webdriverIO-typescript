@@ -1,13 +1,13 @@
-name: CI
+name: Pull Request
 
 on:
-  push:
-    branches-ignore:
+  pull_request:
+    branches:
       - main
 
 jobs:
-  build:
-    name: CI build
+  run-tests:
+    name: Run Tests
     runs-on: ubuntu-latest
   
     steps:
@@ -21,3 +21,6 @@ jobs:
 
       - name: Build tests
         run: npm run build
+
+      - name: Run tests
+        run: npm run tests
