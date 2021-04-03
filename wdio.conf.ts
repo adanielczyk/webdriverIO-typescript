@@ -8,7 +8,10 @@ export const config = {
     capabilities: [{
         maxInstances: 5,
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        acceptInsecureCerts: true,
+        'goog:chromeOptions': {
+            args: ['--headless', '--disable-gpu'],
+        }
     }],
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'debug',
