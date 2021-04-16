@@ -14,13 +14,13 @@ export const config = {
         }
     }],
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'debug',
+    logLevel: 'silent',
     bail: 0,
     baseUrl: 'http://localhost',
     waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
-    services: ['chromedriver'],
+    services: ['chromedriver', 'devtools'],
     framework: 'mocha',
     reporters: ['spec'],
     mochaOpts: {
