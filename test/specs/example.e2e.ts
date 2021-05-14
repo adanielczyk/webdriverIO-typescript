@@ -3,14 +3,12 @@ import { SecurePageObj } from '../pageobjects/secure';
 
 describe('My Login application', () => {
     before(() => {
-        LoginPage.open();
-        LoginPage.login('tomsmith', 'SuperSecretPassword!');
+        browser.enablePerformanceAudits()
+        browser.url('https//google.com')
     });
 
     it('should login with valid credentials', () => {
-        expect(SecurePageObj.flashAlert).toBeExisting();
-        expect(SecurePageObj.flashAlert).toHaveTextContaining(
-            'You logged into a secure area!');
+        console.log(browser.getMetrics(), '---------------')
     });
 });
 
