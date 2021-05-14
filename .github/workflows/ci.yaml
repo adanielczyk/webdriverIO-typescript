@@ -1,13 +1,11 @@
 name: CI
 
 on:
-  push:
-    branches-ignore:
-      - main
+  push
 
 jobs:
   build:
-    name: CI build
+    name: CI
     runs-on: ubuntu-latest
   
     steps:
