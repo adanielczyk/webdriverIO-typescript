@@ -5,7 +5,8 @@ on:
 
 jobs:
   build:
-    name: CI
+    name: Ci
+    environment: dev
     runs-on: ubuntu-latest
   
     steps:
@@ -15,7 +16,7 @@ jobs:
           fetch-depth: 0
       
       - name: Install
-        run: npm ci
+        run: echo ${{ toJson(github) }}
 
-      - name: Build tests
-        run: npm run build
+      # - name: Build tests
+      #   run: npm run build
