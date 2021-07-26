@@ -1,15 +1,13 @@
-import LoginPage from '../pageobjects/login';
-import { SecurePageObj } from '../pageobjects/secure';
+import LoginPage from  '../pageobjects/login';
+import SecurePage from '../pageobjects/secure';
 
 describe('My Login application', () => {
-    before(() => {
-        browser.enablePerformanceAudits()
-        browser.url('https//google.com')
-    });
+    it('should login with valid credentials', async () => {
+        await LoginPage.open();
 
-    it('should login with valid credentials', () => {
-        console.log(browser.getMetrics(), '---------------')
+        await LoginPage.login('tomsmith', 'SuperSecretPassword!');
+        await expect(SecurePage.flashAlert).toBeExisting();
+        await expect(SecurePage.flashAlert).toHaveTextContaining(
+            'You logged into a secure area!');
     });
 });
-
-

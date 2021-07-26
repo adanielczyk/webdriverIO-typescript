@@ -1,4 +1,4 @@
-import { Page } from './page';
+import Page from './page';
 
 /**
  * sub page containing specific selectors and methods for a specific page
@@ -14,4 +14,4 @@ class SecurePage extends Page {
     }
 }
 
-export const SecurePageObj = new SecurePage();
+export default new SecurePage();
