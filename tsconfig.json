@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "types": ["node", "webdriverio/sync", "@wdio/mocha-framework", "expect-webdriverio", "@wdio/types", "@wdio/devtools-service"],
+    "types": ["node", "webdriverio/sync", "@wdio/mocha-framework", "expect-webdriverio", "@wdio/types"],
     "skipLibCheck": true,
     "target": "es2015",
     "module": "commonjs",
